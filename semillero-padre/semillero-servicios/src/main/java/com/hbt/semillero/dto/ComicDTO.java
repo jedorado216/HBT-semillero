@@ -20,7 +20,7 @@ public class ComicDTO implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private String id;
+	private Long id;
 	private String nombre;
 	private String editorial;
 	private TematicaEnum tematicaEnum;
@@ -59,7 +59,7 @@ public class ComicDTO implements Serializable {
 	 * @param cantidad
 	 */
 	
-	public ComicDTO(String id, String nombre, String editorial, TematicaEnum tematicaenum, String coleccion, Integer numeroPaginas, BigDecimal precio, String autores, Boolean color, LocalDate fechaVenta, EstadoEnum estadoEnum, Long cantidad) {
+	public ComicDTO(Long id, String nombre, String editorial, TematicaEnum tematicaenum, String coleccion, Integer numeroPaginas, BigDecimal precio, String autores, Boolean color, LocalDate fechaVenta, EstadoEnum estadoEnum, Long cantidad) {
 		
 		this.id = id;
 		this.nombre = nombre;
@@ -80,7 +80,7 @@ public class ComicDTO implements Serializable {
 	 * 
 	 * @return El id asociado a la clase
 	 */
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
@@ -89,7 +89,7 @@ public class ComicDTO implements Serializable {
 	 * 
 	 * @param id El nuevo id a modificar.
 	 */
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -363,6 +363,14 @@ public class ComicDTO implements Serializable {
 				+ tematicaEnum + ", coleccion=" + coleccion + ", numeroPaginas=" + numeroPaginas + ", precio=" + precio
 				+ ", autores=" + autores + ", color=" + color + ", fechaVenta=" + fechaVenta + ", estadoEnum="
 				+ estadoEnum + ", cantidad=" + cantidad + "]";
+	}
+	public void setMensajeEjecucion(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setExitoso(boolean b) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

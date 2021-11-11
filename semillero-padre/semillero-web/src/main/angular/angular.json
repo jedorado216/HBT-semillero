@@ -50,6 +50,10 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
+              ],
+              "styles": [
+                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "src/styles.css"
               ]
             }
           }
@@ -130,6 +134,7 @@
         }
       }
     }
+    
   },
   "defaultProject": "angular"
 }

@@ -1,0 +1,23 @@
+nombre comic 
+<pre>{{  comicDTO.nombre | json }}</pre>
+<pre>{{ nombre | json }}</pre>
+<div class="row">
+    <div class="col-6">
+        <label for="cantidad">Cantidad*:</label>
+        <input type="number" class="form-control" id="cantidad" formControlName="cantidad" [ngClass]="{ 'is-invalid': submitted && f.cantidad.errors }" />
+        <div *ngIf="submitted && f.cantidad.errors">
+          <span class="text-danger" *ngIf="f.cantidad.errors.required">Campo requerido.</span>
+          <span class="text-danger" *ngIf="f.cantidad.errors.maxlength">El campo solo recibe 50 caracteres.</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <span></span>
+        </div>
+        <div class="col-6 text-right">
+            <button type="button" class="btn btn-primary" (click)="comprarComic()">Comprar</button>
+            <button *ngIf="mostrarBoton" type="button" class="btn btn-primary" (click)="activarCampos()">Cerrar consulta</button>
+        </div>
+    </div>
+    
+</div>
